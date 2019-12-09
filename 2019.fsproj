@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>_2019</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Reader.fs" />
+    <Compile Include="Day-1.fs" />
+    <Compile Include="Day-2.fs" />
+    <Compile Include="Day-3.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+</Project>
