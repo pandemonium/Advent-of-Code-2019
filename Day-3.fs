@@ -59,7 +59,7 @@ namespace AdventOfCode
         prefix @ seen
       List.fold step [origo]
 
-    let traceAllWithDistance =
+    let traceStepsWithDistance =
       let distanceByLocation distance location = 
         location, distance
 
@@ -83,8 +83,8 @@ namespace AdventOfCode
         m
         |> Map.fold intersect []
 
-      (traceAllWithDistance p,
-       traceAllWithDistance q)
+      (traceStepsWithDistance p,
+       traceStepsWithDistance q)
       ||> intersect
       |> List.sortBy (fun (_, distance) -> distance)
 
