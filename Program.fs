@@ -2,12 +2,15 @@
 
 open System
 open AdventOfCode
+open Day2.Intcode
 
 [<EntryPoint>]
 let main argv =
 
-    Day1.fuelRequirementsOfModules "module-mass.txt"
-    |> (Option.iter <| printfn "%d")
+  let loadText = Loader.parseContent >> Loader.load
 
+  let x = Executive.run "day-5.txt"
 
-    0 // return an integer exit code
+  printfn "%d" x
+
+  x

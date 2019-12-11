@@ -21,6 +21,7 @@ module Day1 =
       | []           -> acc
 
       loop (Some []) xs
+      |> Option.map List.rev
 
     let traverse f =
       List.map f >> sequence
